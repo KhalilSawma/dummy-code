@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh '''
           nginx -v
+          curl 54.175.133.199
         '''
       }
     }
