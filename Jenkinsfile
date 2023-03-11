@@ -4,7 +4,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
-          nginx --version
+          curl localhost:80
         '''
       }
     }
