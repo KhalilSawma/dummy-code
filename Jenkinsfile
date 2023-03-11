@@ -4,7 +4,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
-          curl 54.175.133.199:80
+          nginx -v
         '''
       }
     }
