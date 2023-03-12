@@ -12,13 +12,13 @@ pipeline {
         sh 'docker build -t khalil/jenkins-docker-hub .'
       }
     }
-  stages {
+
     stage('run') {
       steps {
         sh 'docker run -name app -p 80:80 khalil/jenkins-docker-hub -d'
       }
     }
-  stages {
+
     stage('test') {
       steps {
         sh 'curl 13.231.116.206:80 '
@@ -41,4 +41,4 @@ pipeline {
       sh 'docker logout'
     }
   }
-}
+ }
