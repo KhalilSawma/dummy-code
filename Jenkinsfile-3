@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t khalil/jenkins-docker-hub .'
+        sh 'docker build -t dcgroup/capstone .'
       }
     }
 
@@ -32,7 +32,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push khalil/jenkins-docker-hub'
+        sh 'docker push dcgroup/capstone'
       }
     }
     stage('logout') {
